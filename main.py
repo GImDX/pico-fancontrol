@@ -211,7 +211,7 @@ def main():
     sm.irq(handler=irq_handler)
     sm.active(1)                     # 使能状态机
     # sm.put(0xaaaa_bbbb_abcd_abcd)  # 测试，截断，多次拉取
-    sm.put(FILTER_US)                # 初始设置脉宽阈值为 100us
+    sm.put(FILTER_US)                # 初始设置脉宽阈值为 1000us
 
     # 启动后台线程
     _thread.start_new_thread(background_thread, ())
